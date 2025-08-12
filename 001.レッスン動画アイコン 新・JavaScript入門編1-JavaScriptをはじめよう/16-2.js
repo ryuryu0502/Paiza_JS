@@ -3,49 +3,32 @@ const input = fs.readFileSync("/dev/stdin", "utf-8").trim();
 const lines = input.split("\n");
 
 /*
-演習課題「文字の一致（paiza ランク D 相当）に挑戦！」
-2 つの文字列 a, b が入力されます。文字列が一致していれば "OK" 、異なっていれば "NG" と出力してください。
+演習課題「類題 1」
 
+標準入力に 3 行で 3 つの文字列 s1, s2, s3 が入力されます。
+3 つの文字列が全て等しいときは YES、そうでないときは NO を出力するプログラムを完成させてください。
 
-入力される値
+プログラムを実行して、想定通り出力されれば演習課題クリアです！
 
-入力は以下のフォーマットで与えられます。
-
-a
-b
-
-- 1 行目に文字列 a
-- 2 行目に文字列 b
-
-期待する出力
-
-文字列 a と文字列 b が一致していれば "OK" 、異なっていれば "NG" と出力してください。
-
-条件
-
-すべてのテストケースにおいて、以下の条件をみたします。
-
-・1 ≦ 文字列 a の長さ ≦ 100
-・1 ≦ 文字列 b の長さ ≦ 100
  入力される値
 
 paiza
 paiza
+813
 
  標準入力からの値取得方法はこちらをご確認ください
 
  期待する出力値
 
-OK
+NO
 */
 
-const a = String(lines[0]);
-const b = String(lines[1]);
-//console.log(a);
-//console.log(b);
+const s1  = String(lines[0]);
+const s2  = String(lines[1]);
+const s3  = String(lines[2]);
 
-if (a === b) {
-    console.log("OK");
-} else {
-    console.log("NG");
+if (s1 === s2 && s2 === s3) {
+    console.log("YES");
+}else{
+    console.log("NO");
 }
